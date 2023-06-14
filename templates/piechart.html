@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Market Caps</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Market Caps</h1>
+    <div id="pie"></div>
+
+    <script>
+        var pie = JSON.parse('{{ pie|safe }}');
+        Plotly.newPlot('pie', pie.data, pie.layout);
+    </script>
+</body>
+</html>
